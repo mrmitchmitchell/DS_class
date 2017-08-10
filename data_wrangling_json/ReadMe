@@ -1,0 +1,20 @@
+JSON Exercises
+
+1. Find the 10 countries with most projects
+2. Find the top 10 major project themes (using column 'mjtheme_namecode')
+3. In 2. above you will notice that some entries have only the code and the name is missing. Create a dataframe with the missing names filled in.
+
+For exercise 1, we have one row per project, per country, 
+so a simple count of the appearance of the country name will provide the number of projects
+
+For the second exercise, we lod the json and then noralize it on the desired field.
+sorting by the value counts of the codes returned gives us the top theme codes
+
+To fill in missing data, I take this dataset and create a lookup:
+First, remove all rows ith blanks.
+Second, remove duplicates.
+
+We ae left with a smal dataset that has a code and a theme name.
+Go back to the original dataset and map the name values to the codes, filling in all missing values
+
+
