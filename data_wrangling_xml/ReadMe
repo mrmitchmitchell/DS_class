@@ -9,22 +9,24 @@ The problems posed were as follows
 
 For problem 1 I found the country, along with its code (for use later) and the infnt mortality rate, if the data existed.
 I used a simple for loop, and an if to check validity, then added them to the dataframe.
-To get the top 10, I used narlgest on the moratlity rate column
+To get the top 10, I used nlargest on the moratlity rate column
+EDIT: There is a bug in nlargest and nsmallest that returns duplicates.
+I have changed those to sort_value and head
 
 Problem 2 was similar, except there are multiple population elements.
 To get the most current, I added two variables. P for population and Y for year.
 If, while looping through cities, I found a larger year for the current city, that had a population, I added that to my dataframe
 I was left with every city, with its most current population.
-Use nlargest again on the population to get the top 10
+Use nlargest again on the population to get the top 10 (see Edit for sort_values and head)
 
 Using the same logic for finding the population as problem 2, problem 3 used the population of the country.
-If I had all variables for an thnic group in a country, I did the math using the percent of an ethnic group on the countrys population.
+If I had all variables for an ethnic group in a country, I did the math using the percent of an ethnic group on the countrys population.
 I then added that ethnic group to a dataframe, with that value.
 Once i had all values, a sum of population while grouping on ethnic group returns a df of the totals.
-Use nlargest again to get the top values.
+Use nlargest again to get the top values. (see Edit for sort_values and head)
 
 Problem 4 required a combination of all the logic of the first 4 problems.
-Using variables, and clearing/filling my dtaframe, I would be left with only the largest river/lake or highest airport.
+Using variables, and clearing/filling my dataframe, I would be left with only the largest river/lake or highest airport.
 I joined to my original datafram, on the country code, to get the name of the country.
 Once I had all the information, a print statement outputs the information neatly.
 
